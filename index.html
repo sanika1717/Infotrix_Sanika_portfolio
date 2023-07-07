@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanika_Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <!------Head Page--->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FrontEnd Developer</p>
+                <h1>Hi,I'm <span>Sanika Bhosale</span><br>From Maharashtra</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--about-->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="sab1.jpg" alt="profile-pic">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I'm Sanikaraje Bhosale, a Frontend Developer with a passion for creating exceptional user
+                        experiences.
+                        Proficient in HTML, CSS, JavaScript, and experienced with frameworks like React.js,
+                        I bring a strong technical skill set to the table. With a keen eye for design and attention to
+                        detail,
+                        I strive to craft visually appealing and intuitive web interfaces. As a dedicated and motivated
+                        individual,
+                        I am eager to contribute my expertise to a dynamic company as a Frontend Developer.
+                        Let's connect and discuss how I can enhance your team and contribute to your web development
+                        projects.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!--Skills -->
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Javascript</span><br></li>
+                            <li><span>HTML</span><br></li>
+                            <li><span>CSS</span><br></li>
+                            <li><span>React.Js</span><br></li>
+                        </ul>
+                    </div>
+                    <!--Experience-->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Infotrix</span><br>Intranship (Currently Working)</li>
+
+                        </ul>
+                    </div>
+                    <!--Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Full Stack Web Developer</span><br>From upGrad (Currently going on)</li>
+                            <li><span>Electronics Engineer</span><br>B.Tech From Tatyasaheb kore Institute of Engineer
+                                And Technology(2022)</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---Projects---->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div id="img">
+                <div class="work-list1">
+                    <a href="https://sanika1717.github.io/Course_Project_Scribbler/" target="_blank">
+                        <img src="scrible1.PNG" alt="scrible-output">
+                        <p id="titlepro">Scrible Bloging Website</p>
+                    </a>
+                    <p>Its Blogging Website Where you can add your thoughts</p>
+                </div>
+                <div class="work-list2">
+                    <a href="https://sanika1717.github.io/Blogify/" target="_blank">
+                        <img src="Blogify1.PNG" alt="Blogify">
+                        <p id="titlepro">Blogify Website</p>
+                    </a>
+                    <p>Its A website where you can read Exploere the news , knowledge etc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 id="cot">Contact Me</h1>
+                    <div >
+                    <p id="email"><i>sanikarajebhosale2000@gmail.com</i></p>
+                    <div>
+                       <p id="linku"><a href=" https://www.linkedin.com/in/sanika-bhosale-02b13b205" target="_blank">Linkedin</a></p>
+                       <p id="gitu"><a href="https://github.com/sanika1717" target="_blank">GitHub</a></p>
+                    </div>
+                    <a href="Sanika_FrontEnd Developer (1).pdf" class="btn123">Download CV</a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email-ID" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>@CopyRight @Sanika </p>
+        </div>
+    </div>
+
+    <script>
+        let tablinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+</body>
+
+</html>
